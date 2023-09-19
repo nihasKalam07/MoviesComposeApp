@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material.icons.Icons
@@ -167,13 +168,17 @@ fun MovieListScreen(
             }
         ) { padding ->
             LazyVerticalGrid(
-                contentPadding = PaddingValues(horizontal = 8.dp, vertical = 8.dp),
+                contentPadding = PaddingValues(
+                    start = 8.dp,
+                    top = padding.calculateTopPadding(),
+                    end = 8.dp,
+                    bottom = padding.calculateBottomPadding()
+                ),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 columns = GridCells.Fixed(2), // 3 columns
             ) {
                 if (listType == MOVIE_LIST_FAVOURITES) {
-                    println("======= favs ${movieListState.movies.size}")
                     items(favouritesState.favourites.size) { i ->
                         MovieGridItem(movie = favouritesState.favourites[i]) {
                             navController.navigate("${Screen.MovieDetailsScreen.route}/${it}")
