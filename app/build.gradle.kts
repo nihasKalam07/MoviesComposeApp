@@ -69,7 +69,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose")
     implementation("androidx.compose.material:material-icons-extended")
     implementation("androidx.lifecycle:lifecycle-runtime-compose")
-    implementation("androidx.navigation:navigation-compose")
     implementation("io.coil-kt:coil-compose:2.0.0")
 
     //Dagger - Hilt
