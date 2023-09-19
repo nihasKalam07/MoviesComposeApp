@@ -34,6 +34,7 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
@@ -43,7 +44,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.nihaskalam.movies.feature_movies.presentation.components.MovieGridItem
-import com.nihaskalam.movies.feature_movies.presentation.util.MOVIE_LIST_FAVOURITES
 import com.nihaskalam.movies.feature_movies.presentation.util.Screen
 
 @OptIn(ExperimentalComposeUiApi::class, ExperimentalMaterial3Api::class)
@@ -57,6 +57,7 @@ fun SearchScreen(
     val focusRequester = remember { FocusRequester() }
 
     val keyboardController = LocalSoftwareKeyboardController.current
+    val focusManager = LocalFocusManager.current
     val state by viewModel.searchItemsState.collectAsState()
     LaunchedEffect(key1 = true) {
         focusRequester.requestFocus()
@@ -108,7 +109,7 @@ fun SearchScreen(
                         keyboardActions = KeyboardActions(
                             onDone = {
                                 keyboardController?.hide()
-                                // Perform search or any other action here
+                                focusManager.clearFocus()
                             }
                         ),
                         modifier = Modifier
@@ -136,9 +137,6 @@ fun SearchScreen(
         )
     }
 }
-
-@OptIn(ExperimentalComposeUiApi::class, ExperimentalMaterial3Api::class)
-
 
 @Preview
 @Composable
