@@ -14,6 +14,7 @@ An Android app that showcases MVVM Clean architecture with Jetpack Compose.
 - Instrumentation tests
 - UI tests - Espresso
 - Retrofit for Network calls
+- Room database
 - Coil for image loading
 - Dynamic theme
 
