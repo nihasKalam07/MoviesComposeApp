@@ -1,7 +1,6 @@
 package com.nihaskalam.movies.feature_movies.data.remote
 
 import com.nihaskalam.movies.feature_movies.data.remote.dto.MoviesDto
-import retrofit2.Response
 import retrofit2.http.GET
 
 /**

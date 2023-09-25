@@ -9,7 +9,6 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -26,9 +25,6 @@ class MovieListViewModel @Inject constructor(
     private val _favouritesState = MutableStateFlow(FavouritesState())
     val favouritesState = _favouritesState.asStateFlow()
 
-//    private val _selectedTabIndexState = MutableStateFlow(0)
-//    val selectedTabIndexState = _selectedTabIndexState.asStateFlow()
-
     private val _eventFlow = MutableSharedFlow<UIEvent>()
     val eventFlow = _eventFlow.asSharedFlow()
 
@@ -36,11 +32,6 @@ class MovieListViewModel @Inject constructor(
         when (event) {
             is MovieListEvent.ShowAllMovies -> getAllMovies()
             is MovieListEvent.ShowAllFavourites -> getAllFavourites()
-//            is MovieListEvent.UpdateSelectedTabIndex -> {
-//                println("============in vm event ${event.index}")
-//                _selectedTabIndexState.value = event.index
-//                println("============in vm ${selectedTabIndexState.value}")
-//            }
         }
     }
 

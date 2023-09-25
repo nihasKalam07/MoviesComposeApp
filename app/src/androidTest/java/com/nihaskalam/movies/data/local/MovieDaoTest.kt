@@ -97,7 +97,7 @@ class MovieDaoTest {
     }
 
     @Test
-    fun `update  movie`() = runBlocking {
+    fun `update movie`() = runBlocking {
         //Given
         val movies = getMovieEntityList()
         movieDao.insertMovies(movies)
@@ -107,6 +107,22 @@ class MovieDaoTest {
         val result = movieDao.getMovieById(movies.first().imdbID)
         //Then
         assertThat(result.isFavourite).isTrue()
+    }
+
+    @Test
+    fun `delete movies`() = runBlocking {
+        //Given
+        val movies = getMovieEntityList()
+        movieDao.insertMovies(movies)
+        //when
+        val insertedMovies = movieDao.getAllMovies()
+        //Then
+        assertThat(insertedMovies).hasSize(movies.size)
+        //When
+        movieDao.deleteMovies(listOf(movies.first().imdbID))
+        val remainingMovies = movieDao.getAllMovies()
+        //Then
+        assertThat(remainingMovies).hasSize(movies.size - 1)
     }
 
     private fun getMovieEntityList(): List<MovieEntity> {
