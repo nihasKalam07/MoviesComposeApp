@@ -19,6 +19,10 @@ An Android app that showcases MVVM Clean architecture with Jetpack Compose.
 
 ## Screenshots
 
-| Movies Light | Favourites Light                                         | Search Light                                             | Details Light                                            | Movies Dark                                             | Favourites Dark                                         | Search Dark                                             | Details Dark                                            |
-|--------------|----------------------------------------------------------|----------------------------------------------------------|----------------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------|
-| <img src="screenshots/ScreenshotLight1.png" width="150"> | <img src="screenshots/ScreenshotLight2.png" width="150"> | <img src="screenshots/ScreenshotLight3.png" width="150"> | <img src="screenshots/ScreenshotLight4.png" width="150"> | <img src="screenshots/ScreenshotDark1.png" width="150"> | <img src="screenshots/ScreenshotDark2.png" width="150"> | <img src="screenshots/ScreenshotDark3.png" width="150"> | <img src="screenshots/ScreenshotDark4.png" width="150"> |
+| Movies Light | Favourites Light                                         | Search Light                                             | Details Light                                            |
+|--------------|----------------------------------------------------------|----------------------------------------------------------|----------------------------------------------------------|
+| <img src="screenshots/ScreenshotLight1.png" width="200"> | <img src="screenshots/ScreenshotLight2.png" width="200"> | <img src="screenshots/ScreenshotLight3.png" width="200"> | <img src="screenshots/ScreenshotLight4.png" width="200"> | 
+
+| Movies Dark                                             | Favourites Dark                                         | Search Dark                                             | Details Dark                                            |
+|--------------|----------------------------------------------------------|----------------------------------------------------------|----------------------------------------------------------|
+| <img src="screenshots/ScreenshotDark1.png" width="200"> | <img src="screenshots/ScreenshotDark2.png" width="200"> | <img src="screenshots/ScreenshotDark3.png" width="200"> | <img src="screenshots/ScreenshotDark4.png" width="200"> |
