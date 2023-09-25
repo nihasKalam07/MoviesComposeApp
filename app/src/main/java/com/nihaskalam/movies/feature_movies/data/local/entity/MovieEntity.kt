@@ -18,7 +18,7 @@ data class MovieEntity(
     val imdbID: String,
     val imdbRating: String,
     var isFavourite: Boolean = false,
-    @PrimaryKey val id: Int? = null
+    @PrimaryKey(autoGenerate = true) val id: Int? = null
 ) {
     fun toMovie(): Movie {
         return Movie(

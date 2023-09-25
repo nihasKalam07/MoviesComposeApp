@@ -99,13 +99,30 @@ dependencies {
     // Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$roomVersion")
 
+    //Local unit tests
     testImplementation("junit:junit:4.13.2")
+    testImplementation("org.hamcrest:hamcrest-all:1.3")
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+    testImplementation("org.robolectric:robolectric:4.3.1")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
+    testImplementation("com.google.truth:truth:1.1.4")
+    testImplementation("org.mockito:mockito-core:3.11.0")
+
+    //Instrumented Unit tests
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("junit:junit:4.13.2")
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
+    androidTestImplementation("androidx.arch.core:core-testing:2.2.0")
+    androidTestImplementation("com.google.truth:truth:1.1.4")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("org.mockito:mockito-core:3.11.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+
 }
 
 kapt {

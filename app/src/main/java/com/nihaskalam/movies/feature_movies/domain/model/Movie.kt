@@ -1,5 +1,7 @@
 package com.nihaskalam.movies.feature_movies.domain.model
 
+import com.nihaskalam.movies.feature_movies.data.local.entity.MovieEntity
+
 data class Movie(
     val actors: String = "",
     val director: String = "",
@@ -13,4 +15,20 @@ data class Movie(
     val imdbID: String = "",
     val imdbRating: String = "",
     val isFavourite: Boolean = false
-)
+) {
+    fun toMovieEntity(): MovieEntity {
+        return MovieEntity(
+            actors = actors,
+            director = director,
+            genre = genre,
+            language = language,
+            plot = plot,
+            poster = poster,
+            runtime = runtime,
+            title = title,
+            year = year,
+            imdbID = imdbID,
+            imdbRating = imdbRating,
+        )
+    }
+}
