@@ -2,11 +2,11 @@ package com.nihaskalam.movies.feature_movies.domain.use_case
 
 import app.cash.turbine.test
 import com.google.common.truth.Truth.assertThat
+import com.nihaskalam.movies.TestUtil
 import com.nihaskalam.movies.core.util.Resource
 import com.nihaskalam.movies.feature_movies.data.repository.FakeMovieRepository
-import com.nihaskalam.movies.feature_movies.domain.model.Movie
 import com.nihaskalam.movies.feature_movies.domain.repository.MovieRepository
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -22,14 +22,14 @@ class GetAllMoviesTest {
     fun setUp() {
         fakeMovieRepository = FakeMovieRepository()
         getAllMovies = GetAllMovies(fakeMovieRepository)
-        getMovieList().forEach {
+        TestUtil.getMovieList().forEach {
             (fakeMovieRepository as FakeMovieRepository).insertMovie(it)
         }
     }
 
     @Test
-    fun `get all movies returns success`() = runBlocking {
-        val movieList = getMovieList()
+    fun `get all movies returns success`() = runTest {
+        val movieList = TestUtil.getMovieList()
         getAllMovies().test {
             val loadingWithoutData = awaitItem()
             assertThat(loadingWithoutData is Resource.Loading && loadingWithoutData.data == null).isTrue()
@@ -43,8 +43,8 @@ class GetAllMoviesTest {
     }
 
     @Test
-    fun `get all movies returns api error`() = runBlocking {
-        val movieList = getMovieList()
+    fun `get all movies returns api error with cached movie list`() = runTest {
+        val movieList = TestUtil.getMovieList()
         val repository = fakeMovieRepository as FakeMovieRepository
         repository.setShouldReturnNetworkError(true)
         getAllMovies().test {
@@ -62,10 +62,24 @@ class GetAllMoviesTest {
         }
     }
 
-    private fun getMovieList(): List<Movie> {
-        val movie1 = Movie(title = "avatar", imdbID = "1", director = "James Cameron")
-        val movie2 = Movie(title = "Inception", imdbID = "2", director = "Nolan")
-        val movie3 = Movie(title = "Pulp fiction", imdbID = "3", director = "Quentin Tarantino")
-        return listOf(movie1, movie2, movie3)
+    @Test
+    fun `get all movies returns api error with empty movie list`() = runTest {
+        val movieList = TestUtil.getMovieList()
+        val repository = fakeMovieRepository as FakeMovieRepository
+        repository.deleteMovies()
+        repository.setShouldReturnNetworkError(true)
+        getAllMovies().test {
+            val loadingWithoutData = awaitItem()
+            assertThat(loadingWithoutData is Resource.Loading && loadingWithoutData.data == null).isTrue()
+            val loadingWithData = awaitItem()
+            assertThat(loadingWithData is Resource.Loading && loadingWithData.data?.isEmpty() == true).isTrue()
+            val apiError = awaitItem()
+            assertThat(
+                apiError is Resource.Error &&
+                        apiError.data?.isEmpty() == true &&
+                        apiError.message == FakeMovieRepository.API_ERROR_MESSAGE
+            ).isTrue()
+            awaitComplete()
+        }
     }
 }

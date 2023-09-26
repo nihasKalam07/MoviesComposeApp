@@ -2,11 +2,11 @@ package com.nihaskalam.movies.feature_movies.domain.use_case
 
 import app.cash.turbine.test
 import com.google.common.truth.Truth.assertThat
+import com.nihaskalam.movies.TestUtil
 import com.nihaskalam.movies.core.util.Resource
 import com.nihaskalam.movies.feature_movies.data.repository.FakeMovieRepository
-import com.nihaskalam.movies.feature_movies.domain.model.Movie
 import com.nihaskalam.movies.feature_movies.domain.repository.MovieRepository
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -22,14 +22,14 @@ class GetMoviesByTitleTest {
     fun setUp() {
         fakeMovieRepository = FakeMovieRepository()
         getMoviesByTitle = GetMoviesByTitle(fakeMovieRepository)
-        getMovieList().forEach {
+        TestUtil.getMovieList().forEach {
             (fakeMovieRepository as FakeMovieRepository).insertMovie(it)
         }
     }
 
     @Test
-    fun `get movies by title returns non-empty list`() = runBlocking {
-        val query = getMovieList().first().title.substring(2)
+    fun `get movies by title returns non-empty list`() = runTest {
+        val query = TestUtil.getMovieList().first().title.substring(2)
         getMoviesByTitle(query).test {
             val success = awaitItem()
             assertThat(success is Resource.Success && success.data?.isNotEmpty() == true).isTrue()
@@ -41,19 +41,12 @@ class GetMoviesByTitleTest {
     }
 
     @Test
-    fun `get movies by title returns empty list`() = runBlocking {
+    fun `get movies by title where query string is empty, returns empty list`() = runTest {
         val query = ""
         getMoviesByTitle(query).test {
             val success = awaitItem()
             assertThat(success is Resource.Success && success.data?.isEmpty() == true).isTrue()
             awaitComplete()
         }
-    }
-
-    private fun getMovieList(): List<Movie> {
-        val movie1 = Movie(title = "avatar", imdbID = "1", director = "James Cameron")
-        val movie2 = Movie(title = "Inception", imdbID = "2", director = "Nolan")
-        val movie3 = Movie(title = "Pulp fiction", imdbID = "3", director = "Quentin Tarantino")
-        return listOf(movie1, movie2, movie3)
     }
 }

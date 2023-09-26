@@ -20,6 +20,10 @@ class FakeMovieRepository : MovieRepository {
         movies.add(movie)
     }
 
+    fun deleteMovies() {
+        movies.clear()
+    }
+
     override fun getAllMovies(): Flow<Resource<List<Movie>>> = flow {
         emit(Resource.Loading())
         emit(Resource.Loading(data = movies))

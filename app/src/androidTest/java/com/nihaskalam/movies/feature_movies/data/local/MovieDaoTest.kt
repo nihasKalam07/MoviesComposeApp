@@ -4,11 +4,10 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.MediumTest
 import com.google.common.truth.Truth.assertThat
 import com.nihaskalam.movies.TEST_DB_NAME
-import com.nihaskalam.movies.feature_movies.data.local.entity.MovieEntity
-import com.nihaskalam.movies.feature_movies.domain.model.Movie
+import com.nihaskalam.movies.TestUtil
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -43,9 +42,9 @@ class MovieDaoTest {
     }
 
     @Test
-    fun `insert movies`() = runBlocking {
+    fun `insert movies`() = runTest {
         //Given
-        val movies = getMovieEntityList()
+        val movies = TestUtil.getMovieEntityList()
         movieDao.insertMovies(movies)
         //When
         val result = movieDao.getAllMovies()
@@ -54,9 +53,9 @@ class MovieDaoTest {
     }
 
     @Test
-    fun `get all movies`() = runBlocking {
+    fun `get all movies`() = runTest {
         //Given
-        val movies = getMovieEntityList()
+        val movies = TestUtil.getMovieEntityList()
         movieDao.insertMovies(movies)
         //When
         val result = movieDao.getAllMovies()
@@ -68,9 +67,9 @@ class MovieDaoTest {
     }
 
     @Test
-    fun `get all favourites`() = runBlocking {
+    fun `get all favourites`() = runTest {
         //Given
-        val favs = getFavouritesList()
+        val favs = TestUtil.getFavouritesList()
         movieDao.insertMovies(favs)
         //When
         val result = movieDao.getAllFavourites()
@@ -79,9 +78,9 @@ class MovieDaoTest {
     }
 
     @Test
-    fun `get movie by id`() = runBlocking {
+    fun `get movie by id`() = runTest {
         //Given
-        val movies = getMovieEntityList()
+        val movies = TestUtil.getMovieEntityList()
         movieDao.insertMovies(movies)
         //When
         val result = movieDao.getMovieById(movies.last().imdbID)
@@ -90,9 +89,9 @@ class MovieDaoTest {
     }
 
     @Test
-    fun `get movie by title`() = runBlocking {
+    fun `get movie by title`() = runTest {
         //Given
-        val movies = getMovieEntityList()
+        val movies = TestUtil.getMovieEntityList()
         movieDao.insertMovies(movies)
         //When
         val result = movieDao.getMoviesByTitle(movies.first().title)
@@ -103,9 +102,9 @@ class MovieDaoTest {
     }
 
     @Test
-    fun `update movie`() = runBlocking {
+    fun `update movie`() = runTest {
         //Given
-        val movies = getMovieEntityList()
+        val movies = TestUtil.getMovieEntityList()
         movieDao.insertMovies(movies)
         //When
         assertThat(movies.first().isFavourite).isFalse()
@@ -116,9 +115,9 @@ class MovieDaoTest {
     }
 
     @Test
-    fun `delete movies`() = runBlocking {
+    fun `delete movies`() = runTest {
         //Given
-        val movies = getMovieEntityList()
+        val movies = TestUtil.getMovieEntityList()
         movieDao.insertMovies(movies)
         //when
         val insertedMovies = movieDao.getAllMovies()
@@ -129,25 +128,5 @@ class MovieDaoTest {
         val remainingMovies = movieDao.getAllMovies()
         //Then
         assertThat(remainingMovies).hasSize(movies.size - 1)
-    }
-
-    private fun getMovieEntityList(): List<MovieEntity> {
-        val movie1 = Movie(title = "avatar", imdbID = "1", director = "James Cameron")
-        val movie2 = Movie(title = "Inception", imdbID = "2", director = "Nolan")
-        val movie3 = Movie(title = "Pulp fiction", imdbID = "3", director = "Quentin Tarantino")
-        return listOf(movie1, movie2, movie3).map { it.toMovieEntity() }
-    }
-
-    private fun getFavouritesList(): List<MovieEntity> {
-        val movie1 = Movie(title = "avatar", imdbID = "1", director = "James Cameron")
-        val movie2 =
-            Movie(title = "Inception", imdbID = "2", director = "Nolan", isFavourite = true)
-        val movie3 = Movie(
-            title = "Pulp fiction",
-            imdbID = "3",
-            director = "Quentin Tarantino",
-            isFavourite = true
-        )
-        return listOf(movie1, movie2, movie3).map { it.toMovieEntity() }
     }
 }
