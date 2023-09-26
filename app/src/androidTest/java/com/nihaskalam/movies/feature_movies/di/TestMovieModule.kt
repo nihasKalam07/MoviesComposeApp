@@ -1,7 +1,8 @@
-package com.nihaskalam.movies.di
+package com.nihaskalam.movies.feature_movies.di
 
 import android.content.Context
 import androidx.room.Room
+import com.nihaskalam.movies.TEST_DB_NAME
 import com.nihaskalam.movies.feature_movies.data.local.MovieDatabase
 import dagger.Module
 import dagger.Provides

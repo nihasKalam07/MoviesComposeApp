@@ -107,6 +107,7 @@ dependencies {
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
     testImplementation("com.google.truth:truth:1.1.4")
     testImplementation("org.mockito:mockito-core:3.11.0")
+    testImplementation("app.cash.turbine:turbine:1.0.0")
 
     //Instrumented Unit tests
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

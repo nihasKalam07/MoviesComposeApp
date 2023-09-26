@@ -1,11 +1,9 @@
-package com.nihaskalam.movies.data.local
+package com.nihaskalam.movies.feature_movies.data.local
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.MediumTest
 import com.google.common.truth.Truth.assertThat
-import com.nihaskalam.movies.di.TEST_DB_NAME
-import com.nihaskalam.movies.feature_movies.data.local.MovieDao
-import com.nihaskalam.movies.feature_movies.data.local.MovieDatabase
+import com.nihaskalam.movies.TEST_DB_NAME
 import com.nihaskalam.movies.feature_movies.data.local.entity.MovieEntity
 import com.nihaskalam.movies.feature_movies.domain.model.Movie
 import dagger.hilt.android.testing.HiltAndroidRule
@@ -34,13 +32,13 @@ class MovieDaoTest {
     lateinit var movieDao: MovieDao
 
     @Before
-    fun setup() {
+    fun setUp() {
         hiltRule.inject()
         movieDao = movieDatabase.dao
     }
 
     @After
-    fun teardown() {
+    fun tearDown() {
         movieDatabase.close()
     }
 

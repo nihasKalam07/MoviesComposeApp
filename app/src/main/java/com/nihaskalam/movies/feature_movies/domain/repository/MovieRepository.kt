@@ -12,7 +12,7 @@ interface MovieRepository {
 
     fun getMovie(imdbId: String): Flow<Resource<Movie>>
 
-    fun updateMovie(isFavourite: Boolean, movieId: String): Flow<Resource<Movie>>
+    fun updateMovie(isFavourite: Boolean, imdbId: String): Flow<Resource<Movie>>
 
     fun getMoviesByTitle(title: String): Flow<Resource<List<Movie>>>
 
