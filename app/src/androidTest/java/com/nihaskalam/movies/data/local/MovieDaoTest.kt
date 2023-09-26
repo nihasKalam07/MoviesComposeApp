@@ -1,33 +1,41 @@
 package com.nihaskalam.movies.data.local
 
-import android.content.Context
-import androidx.room.Room
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.MediumTest
 import com.google.common.truth.Truth.assertThat
+import com.nihaskalam.movies.di.TEST_DB_NAME
 import com.nihaskalam.movies.feature_movies.data.local.MovieDao
 import com.nihaskalam.movies.feature_movies.data.local.MovieDatabase
 import com.nihaskalam.movies.feature_movies.data.local.entity.MovieEntity
 import com.nihaskalam.movies.feature_movies.domain.model.Movie
+import dagger.hilt.android.testing.HiltAndroidRule
+import dagger.hilt.android.testing.HiltAndroidTest
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import javax.inject.Inject
+import javax.inject.Named
 
 @RunWith(AndroidJUnit4::class)
 @MediumTest
+@HiltAndroidTest
 class MovieDaoTest {
 
-    private lateinit var movieDatabase: MovieDatabase
-    private lateinit var movieDao: MovieDao
+    @get:Rule
+    var hiltRule = HiltAndroidRule(this)
+
+    @Inject
+    @Named(TEST_DB_NAME)
+    lateinit var movieDatabase: MovieDatabase
+
+    lateinit var movieDao: MovieDao
 
     @Before
     fun setup() {
-        val context = ApplicationProvider.getApplicationContext<Context>()
-        movieDatabase = Room.inMemoryDatabaseBuilder(context, MovieDatabase::class.java)
-            .allowMainThreadQueries().build()
+        hiltRule.inject()
         movieDao = movieDatabase.dao
     }
 
