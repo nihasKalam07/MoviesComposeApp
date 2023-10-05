@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material.icons.Icons
@@ -198,8 +199,23 @@ fun MovieListScreen(
 
                 }
                 if (movieListState.isLoading || favouritesState.isLoading) {
-                    CircularProgressIndicator(modifier = Modifier.align(Alignment.Center).testTag(
-                        TestTags.PROGRESS_INDICATOR))
+                    CircularProgressIndicator(
+                        modifier = Modifier
+                            .align(Alignment.Center)
+                            .testTag(
+                                TestTags.PROGRESS_INDICATOR
+                            )
+                    )
+                }
+
+                if (listType == MOVIE_LIST_FAVOURITES && favouritesState.favourites.isEmpty()) {
+                    Text(
+                        text = "No Favourites",
+                        style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Normal),
+                        modifier = Modifier
+                            .padding(top = 8.dp)
+                            .align(Alignment.Center)
+                    )
                 }
             }
         }

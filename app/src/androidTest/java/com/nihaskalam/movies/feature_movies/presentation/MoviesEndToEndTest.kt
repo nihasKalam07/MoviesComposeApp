@@ -4,7 +4,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.ui.test.ExperimentalTestApi
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
-import androidx.compose.ui.test.assertIsNotDisplayed
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
@@ -152,7 +151,7 @@ class MoviesEndToEndTest {
         composeRule.onAllNodesWithTag(TestTags.MOVIE_ITEM)[0].performClick()
         composeRule.onNodeWithContentDescription("Favorite").performClick()
         composeRule.onNodeWithContentDescription("Go back").performClick()
-        composeRule.onNodeWithText("Avatar").assertIsNotDisplayed()
+        composeRule.onNodeWithText("No Favourites").assertIsDisplayed()
 
         //check search results with valid and empty queries
         composeRule.onNodeWithContentDescription("Search Movies").performClick()

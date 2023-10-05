@@ -1,6 +1,8 @@
 package com.nihaskalam.movies.feature_movies.presentation.search
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -37,6 +39,7 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -88,52 +91,68 @@ fun SearchScreen(
                 )
             },
             content = { padding ->
-                Column(
+                Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(padding),
-                    verticalArrangement = Arrangement.Top,
-                    horizontalAlignment = Alignment.CenterHorizontally
+                        .background(MaterialTheme.colorScheme.background)
                 ) {
-                    OutlinedTextField(
-                        shape = RoundedCornerShape(50),
-                        value = searchText,
-                        onValueChange = {
-                            searchText = it
-                            viewModel.onEvent(SearchEvent.SearchMovie(searchText))
-                        },
-                        label = { Text(text = "Search") },
-                        placeholder = { Text(text = "Search movies") },
-                        singleLine = true,
-                        keyboardOptions = KeyboardOptions.Default.copy(
-                            imeAction = ImeAction.Done
-                        ),
-                        keyboardActions = KeyboardActions(
-                            onDone = {
-                                keyboardController?.hide()
-                                focusManager.clearFocus()
-                            }
-                        ),
+                    Column(
                         modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(8.dp)
-                            .focusRequester(focusRequester)
-                            .testTag(TestTags.SEARCH_TEXT_FIELD)
-                    )
-
-                    LazyVerticalGrid(
-
-                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 8.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        columns = GridCells.Fixed(2), // 3 columns
+                            .fillMaxSize()
+                            .padding(padding),
+                        verticalArrangement = Arrangement.Top,
+                        horizontalAlignment = Alignment.CenterHorizontally
                     ) {
 
-                        items(state.movies.size) { i ->
-                            MovieGridItem(movie = state.movies[i]) {
-                                navController.navigate("${Screen.MovieDetailsScreen.route}/${it}")
+                        OutlinedTextField(
+                            shape = RoundedCornerShape(50),
+                            value = searchText,
+                            onValueChange = {
+                                searchText = it
+                                viewModel.onEvent(SearchEvent.SearchMovie(searchText))
+                            },
+                            label = { Text(text = "Search") },
+                            placeholder = { Text(text = "Search movies") },
+                            singleLine = true,
+                            keyboardOptions = KeyboardOptions.Default.copy(
+                                imeAction = ImeAction.Done
+                            ),
+                            keyboardActions = KeyboardActions(
+                                onDone = {
+                                    keyboardController?.hide()
+                                    focusManager.clearFocus()
+                                }
+                            ),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(8.dp)
+                                .focusRequester(focusRequester)
+                                .testTag(TestTags.SEARCH_TEXT_FIELD)
+                        )
+
+                        LazyVerticalGrid(
+
+                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 8.dp),
+                            verticalArrangement = Arrangement.spacedBy(8.dp),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            columns = GridCells.Fixed(2), // 3 columns
+                        ) {
+
+                            items(state.movies.size) { i ->
+                                MovieGridItem(movie = state.movies[i]) {
+                                    navController.navigate("${Screen.MovieDetailsScreen.route}/${it}")
+                                }
                             }
                         }
+                    }
+                    if (state.movies.isEmpty()) {
+                        Text(
+                            text = "No results found",
+                            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Normal),
+                            modifier = Modifier
+                                .padding(top = 8.dp)
+                                .align(Alignment.Center)
+                        )
                     }
                 }
             }

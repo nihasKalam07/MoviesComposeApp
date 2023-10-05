@@ -116,5 +116,6 @@ class SearchScreenTest {
         composeRule.onNodeWithContentDescription("Search Movies").performClick()
         composeRule.onNodeWithTag(TestTags.SEARCH_TEXT_FIELD).performTextInput("")
         composeRule.onNodeWithText("Search movies").assertIsDisplayed()
+        composeRule.onNodeWithText("No results found").assertIsDisplayed()
     }
 }
