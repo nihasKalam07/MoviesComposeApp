@@ -5,6 +5,7 @@ import androidx.compose.ui.test.ExperimentalTestApi
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasTestTag
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onAllNodesWithText
@@ -162,6 +163,8 @@ class MoviesEndToEndTest {
             .isNotEmpty()
         //empty query provides empty movie list
         composeRule.onNodeWithTag(TestTags.SEARCH_TEXT_FIELD).performTextClearance()
+        composeRule.waitUntilAtLeastOneExists(hasText("No results found"))
         composeRule.onNodeWithText("Search movies").assertIsDisplayed()
+        composeRule.onNodeWithText("No results found").assertIsDisplayed()
     }
 }

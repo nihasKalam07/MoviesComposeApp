@@ -4,6 +4,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.ui.test.ExperimentalTestApi
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasTestTag
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithContentDescription
@@ -33,7 +34,6 @@ import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.UninstallModules
 import kotlinx.coroutines.test.runTest
 import org.junit.After
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -115,6 +115,7 @@ class SearchScreenTest {
         composeRule.waitUntilAtLeastOneExists(hasTestTag(TestTags.MOVIE_ITEM))
         composeRule.onNodeWithContentDescription("Search Movies").performClick()
         composeRule.onNodeWithTag(TestTags.SEARCH_TEXT_FIELD).performTextInput("")
+        composeRule.waitUntilAtLeastOneExists(hasText("No results found"))
         composeRule.onNodeWithText("Search movies").assertIsDisplayed()
         composeRule.onNodeWithText("No results found").assertIsDisplayed()
     }
