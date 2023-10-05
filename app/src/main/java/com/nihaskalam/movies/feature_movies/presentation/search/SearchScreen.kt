@@ -36,6 +36,7 @@ import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -43,6 +44,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.nihaskalam.movies.core.util.TestTags
 import com.nihaskalam.movies.feature_movies.presentation.components.MovieGridItem
 import com.nihaskalam.movies.feature_movies.presentation.util.Screen
 
@@ -116,6 +118,7 @@ fun SearchScreen(
                             .fillMaxWidth()
                             .padding(8.dp)
                             .focusRequester(focusRequester)
+                            .testTag(TestTags.SEARCH_TEXT_FIELD)
                     )
 
                     LazyVerticalGrid(

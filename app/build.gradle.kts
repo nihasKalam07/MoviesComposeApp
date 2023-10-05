@@ -119,6 +119,7 @@ dependencies {
     androidTestImplementation("org.mockito:mockito-core:3.11.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation("com.google.dagger:hilt-android-testing:2.44")
+    androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.11.0")
     kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.44")
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")

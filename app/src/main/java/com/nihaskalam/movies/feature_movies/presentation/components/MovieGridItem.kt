@@ -14,11 +14,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.nihaskalam.movies.core.util.TestTags
 import com.nihaskalam.movies.feature_movies.domain.model.Movie
 
 
@@ -31,6 +33,7 @@ fun MovieGridItem(movie: Movie, onClick: (String) -> Unit) {
             .clickable { onClick(movie.imdbID) }
             .background(MaterialTheme.colorScheme.background)
             .shadow(4.dp, shape = MaterialTheme.shapes.medium)
+            .testTag(TestTags.MOVIE_ITEM)
     ) {
         Column(
             modifier = Modifier

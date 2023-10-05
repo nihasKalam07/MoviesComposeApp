@@ -3,10 +3,12 @@ package com.nihaskalam.movies.feature_movies.data.local
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.MediumTest
 import com.google.common.truth.Truth.assertThat
-import com.nihaskalam.movies.TEST_DB_NAME
 import com.nihaskalam.movies.TestUtil
+import com.nihaskalam.movies.feature_movies.data.local.entity.MovieEntity
+import com.nihaskalam.movies.feature_movies.di.MovieModule
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
+import dagger.hilt.android.testing.UninstallModules
 import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Before
@@ -14,26 +16,30 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import javax.inject.Inject
-import javax.inject.Named
 
 @RunWith(AndroidJUnit4::class)
 @MediumTest
 @HiltAndroidTest
+@UninstallModules(MovieModule::class)
 class MovieDaoTest {
 
     @get:Rule
     var hiltRule = HiltAndroidRule(this)
 
     @Inject
-    @Named(TEST_DB_NAME)
     lateinit var movieDatabase: MovieDatabase
 
     lateinit var movieDao: MovieDao
+    lateinit var movies: List<MovieEntity>
 
     @Before
     fun setUp() {
         hiltRule.inject()
         movieDao = movieDatabase.dao
+        movies = TestUtil.getMovieEntityList()
+        runTest {
+            movieDao.insertMovies(movies)
+        }
     }
 
     @After
@@ -43,9 +49,6 @@ class MovieDaoTest {
 
     @Test
     fun `insert movies`() = runTest {
-        //Given
-        val movies = TestUtil.getMovieEntityList()
-        movieDao.insertMovies(movies)
         //When
         val result = movieDao.getAllMovies()
         //Then
@@ -54,9 +57,6 @@ class MovieDaoTest {
 
     @Test
     fun `get all movies`() = runTest {
-        //Given
-        val movies = TestUtil.getMovieEntityList()
-        movieDao.insertMovies(movies)
         //When
         val result = movieDao.getAllMovies()
         //Then
@@ -79,9 +79,6 @@ class MovieDaoTest {
 
     @Test
     fun `get movie by id`() = runTest {
-        //Given
-        val movies = TestUtil.getMovieEntityList()
-        movieDao.insertMovies(movies)
         //When
         val result = movieDao.getMovieById(movies.last().imdbID)
         //Then
@@ -90,9 +87,6 @@ class MovieDaoTest {
 
     @Test
     fun `get movie by title`() = runTest {
-        //Given
-        val movies = TestUtil.getMovieEntityList()
-        movieDao.insertMovies(movies)
         //When
         val result = movieDao.getMoviesByTitle(movies.first().title)
         //Then
@@ -103,9 +97,6 @@ class MovieDaoTest {
 
     @Test
     fun `update movie`() = runTest {
-        //Given
-        val movies = TestUtil.getMovieEntityList()
-        movieDao.insertMovies(movies)
         //When
         assertThat(movies.first().isFavourite).isFalse()
         movieDao.update(isFavourite = true, movies.first().imdbID)
@@ -116,9 +107,6 @@ class MovieDaoTest {
 
     @Test
     fun `delete movies`() = runTest {
-        //Given
-        val movies = TestUtil.getMovieEntityList()
-        movieDao.insertMovies(movies)
         //when
         val insertedMovies = movieDao.getAllMovies()
         //Then

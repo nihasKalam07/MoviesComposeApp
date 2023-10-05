@@ -1,0 +1,800 @@
+{
+  "movies": [
+    {
+      "Title": "Avatar",
+      "Year": "2009",
+      "Rated": "PG-13",
+      "Released": "18 Dec 2009",
+      "Runtime": "162 min",
+      "Genre": "Action, Adventure, Fantasy",
+      "Director": "James Cameron",
+      "Writer": "James Cameron",
+      "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver",
+      "Plot": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+      "Language": "English, Spanish",
+      "Country": "United States",
+      "Awards": "Won 3 Oscars. 89 wins & 131 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.9/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "81%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "83/100"
+        }
+      ],
+      "Metascore": "83",
+      "imdbRating": "7.9",
+      "imdbVotes": "1,359,455",
+      "imdbID": "1",
+      "Type": "movie",
+      "DVD": "10 Feb 2016",
+      "BoxOffice": "$785,221,649",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Inception",
+      "Year": "2010",
+      "Rated": "PG-13",
+      "Released": "16 Jul 2010",
+      "Runtime": "148 min",
+      "Genre": "Action, Adventure, Sci-Fi",
+      "Director": "Christopher Nolan",
+      "Writer": "Christopher Nolan",
+      "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+      "Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+      "Language": "English, Japanese, French",
+      "Country": "United States, United Kingdom",
+      "Awards": "Won 4 Oscars. 159 wins & 220 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.8/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "87%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "74/100"
+        }
+      ],
+      "Metascore": "74",
+      "imdbRating": "8.8",
+      "imdbVotes": "2,462,841",
+      "imdbID": "2",
+      "Type": "movie",
+      "DVD": "20 Jun 2013",
+      "BoxOffice": "$292,587,330",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Pulp Fiction",
+      "Year": "1994",
+      "Rated": "R",
+      "Released": "14 Oct 1994",
+      "Runtime": "154 min",
+      "Genre": "Crime, Drama",
+      "Director": "Quentin Tarantino",
+      "Writer": "Quentin Tarantino, Roger Avary",
+      "Actors": "John Travolta, Uma Thurman, Samuel L. Jackson",
+      "Plot": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "Language": "English, Spanish, French",
+      "Country": "United States",
+      "Awards": "Won 1 Oscar. 69 wins & 72 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.9/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "92%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "95/100"
+        }
+      ],
+      "Metascore": "95",
+      "imdbRating": "8.9",
+      "imdbVotes": "2,142,709",
+      "imdbID": "3",
+      "Type": "movie",
+      "DVD": "21 Apr 2016",
+      "BoxOffice": "$107,928,762",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "The Dark Knight",
+      "Year": "2008",
+      "Rated": "PG-13",
+      "Released": "18 Jul 2008",
+      "Runtime": "152 min",
+      "Genre": "Action, Crime, Drama",
+      "Director": "Christopher Nolan",
+      "Writer": "Jonathan Nolan, Christopher Nolan, David S. Goyer",
+      "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart",
+      "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+      "Language": "English, Mandarin",
+      "Country": "United States, United Kingdom",
+      "Awards": "Won 2 Oscars. 162 wins & 164 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "9.0/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "94%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "84/100"
+        }
+      ],
+      "Metascore": "84",
+      "imdbRating": "9.0",
+      "imdbVotes": "2,774,186",
+      "imdbID": "2",
+      "Type": "movie",
+      "DVD": "14 Jun 2010",
+      "BoxOffice": "$534,987,076",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "The Dark Knight Rises",
+      "Year": "2012",
+      "Rated": "PG-13",
+      "Released": "20 Jul 2012",
+      "Runtime": "164 min",
+      "Genre": "Action, Drama, Thriller",
+      "Director": "Christopher Nolan",
+      "Writer": "Jonathan Nolan, Christopher Nolan, David S. Goyer",
+      "Actors": "Christian Bale, Tom Hardy, Anne Hathaway",
+      "Plot": "Eight years after the Joker's reign of chaos, Batman is coerced out of exile with the assistance of the mysterious Selina Kyle in order to defend Gotham City from the vicious guerrilla terrorist Bane.",
+      "Language": "English, Arabic",
+      "Country": "United States, United Kingdom",
+      "Awards": "Nominated for 1 BAFTA Award42 wins & 103 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.4/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "87%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "78/100"
+        }
+      ],
+      "Metascore": "78",
+      "imdbRating": "8.4",
+      "imdbVotes": "1,770,340",
+      "imdbID": "3",
+      "Type": "movie",
+      "DVD": "07 Jan 2014",
+      "BoxOffice": "$448,149,584",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Oppenheimer",
+      "Year": "2023",
+      "Rated": "R",
+      "Released": "21 Jul 2023",
+      "Runtime": "180 min",
+      "Genre": "Biography, Drama, History",
+      "Director": "Christopher Nolan",
+      "Writer": "Christopher Nolan, Kai Bird, Martin Sherwin",
+      "Actors": "Cillian Murphy, Emily Blunt, Matt Damon",
+      "Plot": "The story of American scientist, J. Robert Oppenheimer, and his role in the development of the atomic bomb.",
+      "Language": "English, German, Italian",
+      "Country": "United States, United Kingdom",
+      "Awards": "2 wins & 1 nomination",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.6/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "93%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "88/100"
+        }
+      ],
+      "Metascore": "88",
+      "imdbRating": "8.6",
+      "imdbVotes": "402,067",
+      "imdbID": "tt15398776",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$302,215,760",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Interstellar",
+      "Year": "2014",
+      "Rated": "PG-13",
+      "Released": "07 Nov 2014",
+      "Runtime": "169 min",
+      "Genre": "Adventure, Drama, Sci-Fi",
+      "Director": "Christopher Nolan",
+      "Writer": "Jonathan Nolan, Christopher Nolan",
+      "Actors": "Matthew McConaughey, Anne Hathaway, Jessica Chastain",
+      "Plot": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
+      "Language": "English",
+      "Country": "United States, United Kingdom, Canada",
+      "Awards": "Won 1 Oscar. 44 wins & 148 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.7/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "73%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "74/100"
+        }
+      ],
+      "Metascore": "74",
+      "imdbRating": "8.7",
+      "imdbVotes": "1,980,713",
+      "imdbID": "tt0816692",
+      "Type": "movie",
+      "DVD": "24 May 2016",
+      "BoxOffice": "$188,020,017",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Tenet",
+      "Year": "2020",
+      "Rated": "PG-13",
+      "Released": "03 Sep 2020",
+      "Runtime": "150 min",
+      "Genre": "Action, Sci-Fi, Thriller",
+      "Director": "Christopher Nolan",
+      "Writer": "Christopher Nolan",
+      "Actors": "John David Washington, Robert Pattinson, Elizabeth Debicki",
+      "Plot": "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
+      "Language": "English, Russian, Ukrainian, Estonian, Norwegian, Hindi",
+      "Country": "United States, United Kingdom",
+      "Awards": "Won 1 Oscar. 49 wins & 136 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMzU3YWYwNTQtZTdiMC00NjY5LTlmMTMtZDFlYTEyODBjMTk5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.3/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "69%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "69/100"
+        }
+      ],
+      "Metascore": "69",
+      "imdbRating": "7.3",
+      "imdbVotes": "557,406",
+      "imdbID": "tt6723592",
+      "Type": "movie",
+      "DVD": "15 Dec 2020",
+      "BoxOffice": "$58,504,105",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Batman Begins",
+      "Year": "2005",
+      "Rated": "PG-13",
+      "Released": "15 Jun 2005",
+      "Runtime": "140 min",
+      "Genre": "Action, Crime, Drama",
+      "Director": "Christopher Nolan",
+      "Writer": "Bob Kane, David S. Goyer, Christopher Nolan",
+      "Actors": "Christian Bale, Michael Caine, Ken Watanabe",
+      "Plot": "After witnessing his parents' death, Bruce learns the art of fighting to confront injustice. When he returns to Gotham as Batman, he must stop a secret society that intends to destroy the city.",
+      "Language": "English, Mandarin",
+      "Country": "United States, United Kingdom",
+      "Awards": "Nominated for 1 Oscar. 14 wins & 79 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.2/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "85%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "70/100"
+        }
+      ],
+      "Metascore": "70",
+      "imdbRating": "8.2",
+      "imdbVotes": "1,528,522",
+      "imdbID": "tt0372784",
+      "Type": "movie",
+      "DVD": "09 Sep 2009",
+      "BoxOffice": "$206,863,479",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Dunkirk",
+      "Year": "2017",
+      "Rated": "PG-13",
+      "Released": "21 Jul 2017",
+      "Runtime": "106 min",
+      "Genre": "Action, Drama, History",
+      "Director": "Christopher Nolan",
+      "Writer": "Christopher Nolan",
+      "Actors": "Fionn Whitehead, Barry Keoghan, Mark Rylance",
+      "Plot": "Allied soldiers from Belgium, the British Commonwealth and Empire, and France are surrounded by the German Army and evacuated during a fierce battle in World War II.",
+      "Language": "English, French, German",
+      "Country": "United Kingdom, Netherlands, France, United States",
+      "Awards": "Won 3 Oscars. 65 wins & 233 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.8/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "92%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "94/100"
+        }
+      ],
+      "Metascore": "94",
+      "imdbRating": "7.8",
+      "imdbVotes": "710,090",
+      "imdbID": "tt5013056",
+      "Type": "movie",
+      "DVD": "12 Dec 2017",
+      "BoxOffice": "$189,740,665",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Ford v Ferrari",
+      "Year": "2019",
+      "Rated": "PG-13",
+      "Released": "15 Nov 2019",
+      "Runtime": "152 min",
+      "Genre": "Action, Biography, Drama",
+      "Director": "James Mangold",
+      "Writer": "Jez Butterworth, John-Henry Butterworth, Jason Keller",
+      "Actors": "Matt Damon, Christian Bale, Jon Bernthal",
+      "Plot": "American car designer Carroll Shelby and driver Ken Miles battle corporate interference and the laws of physics to build a revolutionary race car for Ford in order to defeat Ferrari at the 24 Hours of Le Mans in 1966.",
+      "Language": "English, Italian, French, Japanese",
+      "Country": "United States",
+      "Awards": "Won 2 Oscars. 25 wins & 88 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BM2UwMDVmMDItM2I2Yi00NGZmLTk4ZTUtY2JjNTQ3OGQ5ZjM2XkEyXkFqcGdeQXVyMTA1OTYzOTUx._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.1/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "92%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "81/100"
+        }
+      ],
+      "Metascore": "81",
+      "imdbRating": "8.1",
+      "imdbVotes": "434,909",
+      "imdbID": "tt1950186",
+      "Type": "movie",
+      "DVD": "15 Nov 2019",
+      "BoxOffice": "$117,624,357",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Top Gun: Maverick",
+      "Year": "2022",
+      "Rated": "PG-13",
+      "Released": "27 May 2022",
+      "Runtime": "130 min",
+      "Genre": "Action, Drama",
+      "Director": "Joseph Kosinski",
+      "Writer": "Jim Cash, Jack Epps Jr., Peter Craig",
+      "Actors": "Tom Cruise, Jennifer Connelly, Miles Teller",
+      "Plot": "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to ...",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "Won 1 Oscar. 94 wins & 216 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.3/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "96%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "78/100"
+        }
+      ],
+      "Metascore": "78",
+      "imdbRating": "8.3",
+      "imdbVotes": "627,105",
+      "imdbID": "tt1745960",
+      "Type": "movie",
+      "DVD": "22 Aug 2022",
+      "BoxOffice": "$718,732,821",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Everything Everywhere All at Once",
+      "Year": "2022",
+      "Rated": "R",
+      "Released": "08 Apr 2022",
+      "Runtime": "139 min",
+      "Genre": "Action, Adventure, Comedy",
+      "Director": "Daniel Kwan, Daniel Scheinert",
+      "Writer": "Daniel Kwan, Daniel Scheinert",
+      "Actors": "Michelle Yeoh, Stephanie Hsu, Jamie Lee Curtis",
+      "Plot": "A middle-aged Chinese immigrant is swept up into an insane adventure in which she alone can save existence by exploring other universes and connecting with the lives she could have led.",
+      "Language": "English, Mandarin, Cantonese",
+      "Country": "United States",
+      "Awards": "Won 7 Oscars. 387 wins & 358 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYTdiOTIyZTQtNmQ1OS00NjZlLWIyMTgtYzk5Y2M3ZDVmMDk1XkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.8/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "94%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "81/100"
+        }
+      ],
+      "Metascore": "81",
+      "imdbRating": "7.8",
+      "imdbVotes": "473,119",
+      "imdbID": "tt6710474",
+      "Type": "movie",
+      "DVD": "07 Jun 2022",
+      "BoxOffice": "$77,191,785",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Aftersun",
+      "Year": "2022",
+      "Rated": "R",
+      "Released": "18 Nov 2022",
+      "Runtime": "102 min",
+      "Genre": "Drama",
+      "Director": "Charlotte Wells",
+      "Writer": "Charlotte Wells",
+      "Actors": "Paul Mescal, Frankie Corio, Celia Rowlson-Hall",
+      "Plot": "Sophie reflects on the shared joy and private melancholy of a holiday she took with her father twenty years earlier. Memories real and imagined fill the gaps between as she tries to reconcile the father she knew with the man she d...",
+      "Language": "English, Turkish, Spanish",
+      "Country": "United Kingdom, United States",
+      "Awards": "Nominated for 1 Oscar. 81 wins & 162 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTM3OTU0ZGUtNzYwYy00ODU3LWI3YjgtOWZlODliMmRiMWEzXkEyXkFqcGdeQXVyMTAyMjQ3NzQ1._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.7/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "96%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "95/100"
+        }
+      ],
+      "Metascore": "95",
+      "imdbRating": "7.7",
+      "imdbVotes": "72,767",
+      "imdbID": "tt19770238",
+      "Type": "movie",
+      "DVD": "20 Dec 2022",
+      "BoxOffice": "$1,658,790",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Tár",
+      "Year": "2022",
+      "Rated": "R",
+      "Released": "28 Oct 2022",
+      "Runtime": "158 min",
+      "Genre": "Drama, Music",
+      "Director": "Todd Field",
+      "Writer": "Todd Field",
+      "Actors": "Cate Blanchett, Noémie Merlant, Nina Hoss",
+      "Plot": "Set in the international world of Western classical music, the film centers on Lydia Tár, widely considered one of the greatest living composer-conductors and the very first female director of a major German orchestra.",
+      "Language": "English, German, Filipino, French",
+      "Country": "United States",
+      "Awards": "Nominated for 6 Oscars. 73 wins & 247 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BM2I0ZDcyYzItMGEyNi00YWVhLTlmNTQtOWVlYjE1ZGVhNWM0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.4/10"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "92/100"
+        }
+      ],
+      "Metascore": "92",
+      "imdbRating": "7.4",
+      "imdbVotes": "80,669",
+      "imdbID": "tt14444726",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$6,773,650",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Avatar: The Way of Water",
+      "Year": "2022",
+      "Rated": "PG-13",
+      "Released": "16 Dec 2022",
+      "Runtime": "192 min",
+      "Genre": "Action, Adventure, Fantasy",
+      "Director": "James Cameron",
+      "Writer": "James Cameron, Rick Jaffa, Amanda Silver",
+      "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver",
+      "Plot": "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "Won 1 Oscar. 63 wins & 133 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.6/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "76%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "67/100"
+        }
+      ],
+      "Metascore": "67",
+      "imdbRating": "7.6",
+      "imdbVotes": "455,895",
+      "imdbID": "tt1630029",
+      "Type": "movie",
+      "DVD": "28 Mar 2023",
+      "BoxOffice": "$684,075,767",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "All Quiet on the Western Front",
+      "Year": "2022",
+      "Rated": "R",
+      "Released": "28 Oct 2022",
+      "Runtime": "148 min",
+      "Genre": "Action, Drama, War",
+      "Director": "Edward Berger",
+      "Writer": "Edward Berger, Lesley Paterson, Ian Stokell",
+      "Actors": "Felix Kammerer, Albrecht Schuch, Aaron Hilmer",
+      "Plot": "A young German soldier's terrifying experiences and distress on the western front during World War I.",
+      "Language": "German, French",
+      "Country": "Germany, United States, United Kingdom",
+      "Awards": "Won 4 Oscars. 50 wins & 82 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMzM4ZDJhYjYtZGY5Ny00NTk0LWI4ZTYtNjczZDFiMGI2ZjEzXkEyXkFqcGdeQXVyNjc5NjEzNA@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.8/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "90%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "76/100"
+        }
+      ],
+      "Metascore": "76",
+      "imdbRating": "7.8",
+      "imdbVotes": "220,096",
+      "imdbID": "tt1016150",
+      "Type": "movie",
+      "DVD": "28 Oct 2022",
+      "BoxOffice": "N/A",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Happening",
+      "Year": "2021",
+      "Rated": "R",
+      "Released": "24 Nov 2021",
+      "Runtime": "100 min",
+      "Genre": "Drama",
+      "Director": "Audrey Diwan",
+      "Writer": "Marcia Romano, Audrey Diwan, Annie Ernaux",
+      "Actors": "Anamaria Vartolomei, Kacey Mottet Klein, Luàna Bajrami",
+      "Plot": "An adaptation of Annie Ernaux's novel of the same name, looking back on her experience with abortion when it was still illegal in France in the 1960s.",
+      "Language": "French",
+      "Country": "France",
+      "Awards": "Nominated for 1 BAFTA Award25 wins & 46 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZDU4NTE3YTQtMzczMC00YzRkLWI5MjItNGE3NjQ0NTY4MzExXkEyXkFqcGdeQXVyODA0MjgyNzM@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.4/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "99%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "86/100"
+        }
+      ],
+      "Metascore": "86",
+      "imdbRating": "7.4",
+      "imdbVotes": "10,337",
+      "imdbID": "tt13880104",
+      "Type": "movie",
+      "DVD": "21 Jun 2022",
+      "BoxOffice": "$181,023",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "The Worst Person in the World",
+      "Year": "2021",
+      "Rated": "R",
+      "Released": "13 Oct 2021",
+      "Runtime": "128 min",
+      "Genre": "Comedy, Drama, Romance",
+      "Director": "Joachim Trier",
+      "Writer": "Eskil Vogt, Joachim Trier",
+      "Actors": "Renate Reinsve, Anders Danielsen Lie, Herbert Nordrum",
+      "Plot": "The chronicles of four years in the life of Julie, a young woman who navigates the troubled waters of her love life and struggles to find her career path, leading her to take a realistic look at who she really is.",
+      "Language": "Norwegian",
+      "Country": "Norway, France, Sweden, Denmark",
+      "Awards": "Nominated for 2 Oscars. 43 wins & 103 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOWZkMGY2MzgtMTA0My00OTAxLTk0MDEtNWNjMWVhZGMyNGJiXkEyXkFqcGdeQXVyMTk4NTIzMzI@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.8/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "96%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "90/100"
+        }
+      ],
+      "Metascore": "90",
+      "imdbRating": "7.8",
+      "imdbVotes": "85,315",
+      "imdbID": "tt10370710",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$3,034,775",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    {
+      "Title": "Fight Club",
+      "Year": "1999",
+      "Rated": "R",
+      "Released": "15 Oct 1999",
+      "Runtime": "139 min",
+      "Genre": "Drama",
+      "Director": "David Fincher",
+      "Writer": "Chuck Palahniuk, Jim Uhls",
+      "Actors": "Brad Pitt, Edward Norton, Meat Loaf",
+      "Plot": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+      "Language": "English",
+      "Country": "Germany, United States",
+      "Awards": "Nominated for 1 Oscar. 12 wins & 38 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BODQ0OWJiMzktYjNlYi00MzcwLThlZWMtMzRkYTY4ZDgxNzgxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.8/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "79%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "67/100"
+        }
+      ],
+      "Metascore": "67",
+      "imdbRating": "8.8",
+      "imdbVotes": "2,224,281",
+      "imdbID": "tt0137523",
+      "Type": "movie",
+      "DVD": "19 Nov 2014",
+      "BoxOffice": "$37,030,102",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    }
+  ]
+}

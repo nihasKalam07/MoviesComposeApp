@@ -37,6 +37,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -44,6 +45,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.nihaskalam.movies.core.util.TestTags
 import com.nihaskalam.movies.feature_movies.presentation.components.MovieGridItem
 import com.nihaskalam.movies.feature_movies.presentation.util.BottomNavigationItem
 import com.nihaskalam.movies.feature_movies.presentation.util.MOVIE_LIST_ALL
@@ -123,7 +125,6 @@ fun MovieListScreen(
                                 index == 0
                             },
                             onClick = {
-                                println("============on click $index")
                                 selectedItemIndex = index
                                 if (selectedItemIndex == 0) {
                                     navController.navigate("${Screen.MovieListScreen.route}/${MOVIE_LIST_ALL}") {
@@ -197,7 +198,8 @@ fun MovieListScreen(
 
                 }
                 if (movieListState.isLoading || favouritesState.isLoading) {
-                    CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+                    CircularProgressIndicator(modifier = Modifier.align(Alignment.Center).testTag(
+                        TestTags.PROGRESS_INDICATOR))
                 }
             }
         }
