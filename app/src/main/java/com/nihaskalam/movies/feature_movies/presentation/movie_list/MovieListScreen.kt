@@ -184,13 +184,23 @@ fun MovieListScreen(
                     columns = GridCells.Fixed(2), // 3 columns
                 ) {
                     if (listType == MOVIE_LIST_FAVOURITES) {
-                        items(favouritesState.favourites.size) { i ->
+                        items(
+                            count = favouritesState.favourites.size,
+                            key = {
+                                favouritesState.favourites[it].id
+                            }
+                        ) { i ->
                             MovieGridItem(movie = favouritesState.favourites[i]) {
                                 navController.navigate("${Screen.MovieDetailsScreen.route}/${it}")
                             }
                         }
                     } else {
-                        items(movieListState.movies.size) { i ->
+                        items(
+                            movieListState.movies.size,
+                            key = {
+                                movieListState.movies[it].id
+                            }
+                        ) { i ->
                             MovieGridItem(movie = movieListState.movies[i]) {
                                 navController.navigate("${Screen.MovieDetailsScreen.route}/${it}")
                             }

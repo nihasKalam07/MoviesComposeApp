@@ -1,6 +1,7 @@
 package com.nihaskalam.movies.feature_movies.domain.model
 
 import com.nihaskalam.movies.feature_movies.data.local.entity.MovieEntity
+import java.util.UUID
 
 data class Movie(
     val actors: String = "",
@@ -14,7 +15,9 @@ data class Movie(
     val year: String = "",
     val imdbID: String = "",
     val imdbRating: String = "",
-    val isFavourite: Boolean = false
+    val isFavourite: Boolean = false,
+    val
+    id: String = UUID.randomUUID().toString()
 ) {
     fun toMovieEntity(): MovieEntity {
         return MovieEntity(

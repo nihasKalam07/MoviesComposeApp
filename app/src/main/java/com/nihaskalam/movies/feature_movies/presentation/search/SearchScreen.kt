@@ -138,7 +138,12 @@ fun SearchScreen(
                             columns = GridCells.Fixed(2), // 3 columns
                         ) {
 
-                            items(state.movies.size) { i ->
+                            items(
+                                count = state.movies.size,
+                                key = {
+                                    state.movies[it].id
+                                }
+                            ) { i ->
                                 MovieGridItem(movie = state.movies[i]) {
                                     navController.navigate("${Screen.MovieDetailsScreen.route}/${it}")
                                 }
